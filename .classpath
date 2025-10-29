@@ -14,15 +14,15 @@
 	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
+			<attribute name="test" value="true"/>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
 		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -31,9 +31,178 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+	<classpathentry exported="true" kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/allure-commandline-2.24.0.jar"/>
+	<classpathentry kind="lib" path="lib/allure-generator-2.24.0.jar"/>
+	<classpathentry kind="lib" path="lib/allure-java-commons-2.24.0.jar"/>
+	<classpathentry kind="lib" path="lib/allure-model-2.24.0.jar"/>
+	<classpathentry kind="lib" path="lib/allure-test-filter-2.24.0.jar"/>
+	<classpathentry kind="lib" path="lib/allure-testng-2.24.0.jar"/>
+	<classpathentry kind="lib" path="lib/antlr4-runtime-4.11.1.jar"/>
+	<classpathentry kind="lib" path="lib/antlr4-runtime-4.11.1-sources.jar"/>
+	<classpathentry kind="lib" path="lib/aspectjweaver-1.9.24.jar"/>
+	<classpathentry kind="lib" path="lib/auto-service-annotations-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/auto-service-annotations-1.1.1-sources.jar"/>
+	<classpathentry kind="lib" path="lib/bcpkix-jdk18on-1.82.jar"/>
+	<classpathentry kind="lib" path="lib/bcpkix-jdk18on-1.82-sources.jar"/>
+	<classpathentry kind="lib" path="lib/bcprov-jdk18on-1.82.jar"/>
+	<classpathentry kind="lib" path="lib/bcprov-jdk18on-1.82-sources.jar"/>
+	<classpathentry kind="lib" path="lib/bcutil-jdk18on-1.82.jar"/>
+	<classpathentry kind="lib" path="lib/bcutil-jdk18on-1.82-sources.jar"/>
+	<classpathentry kind="lib" path="lib/byte-buddy-1.17.7.jar"/>
+	<classpathentry kind="lib" path="lib/byte-buddy-1.17.7-sources.jar"/>
+	<classpathentry kind="lib" path="lib/caffeine-3.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/caffeine-3.2.2-sources.jar"/>
+	<classpathentry kind="lib" path="lib/checker-qual-3.21.2.jar"/>
+	<classpathentry kind="lib" path="lib/checker-qual-3.21.2-sources.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-compress-1.26.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-exec-1.5.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-exec-1.5.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.16.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.12.0.jar"/>
+	<classpathentry kind="lib" path="lib/curvesapi-1.07.jar"/>
+	<classpathentry kind="lib" path="lib/error_prone_annotations-2.41.0.jar"/>
+	<classpathentry kind="lib" path="lib/error_prone_annotations-2.41.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/extentreports-4.1.7.jar"/>
+	<classpathentry kind="lib" path="lib/extentreports-5.0.9.jar"/>
+	<classpathentry kind="lib" path="lib/extentreports-5.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/failsafe-3.3.2.jar"/>
+	<classpathentry kind="lib" path="lib/failsafe-3.3.2-sources.jar"/>
+	<classpathentry kind="lib" path="lib/failureaccess-1.0.3.jar"/>
+	<classpathentry kind="lib" path="lib/failureaccess-1.0.3-sources.jar"/>
+	<classpathentry kind="lib" path="lib/freemarker-2.3.31.jar"/>
+	<classpathentry kind="lib" path="lib/graphql-java-24.1.jar"/>
+	<classpathentry kind="lib" path="lib/graphql-java-24.1-sources.jar"/>
+	<classpathentry kind="lib" path="lib/gson-2.10.1.jar"/>
+	<classpathentry kind="lib" path="lib/guava-32.0.0-jre.jar"/>
+	<classpathentry kind="lib" path="lib/guava-33.2.0-jre.jar"/>
+	<classpathentry kind="lib" path="lib/guava-33.5.0-jre.jar"/>
+	<classpathentry kind="lib" path="lib/guava-33.5.0-jre-sources.jar"/>
+	<classpathentry kind="lib" path="lib/j2objc-annotations-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/j2objc-annotations-3.1-sources.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-annotations-2.16.1.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-2.16.1.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-databind-2.16.1.jar"/>
+	<classpathentry kind="lib" path="lib/java-dataloader-5.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/java-dataloader-5.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/jcommander-1.82.jar"/>
+	<classpathentry kind="lib" path="lib/jcommander-1.82-sources.jar"/>
+	<classpathentry kind="lib" path="lib/jeromq-0.6.0.jar"/>
+	<classpathentry kind="lib" path="lib/jeromq-0.6.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/jnacl-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/jnacl-1.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/jsoup-1.15.3.jar"/>
+	<classpathentry kind="lib" path="lib/jspecify-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/jspecify-1.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-api-2.25.0.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-core-2.25.0.jar"/>
+	<classpathentry kind="lib" path="lib/netty-buffer-4.2.6.Final.jar"/>
+	<classpathentry kind="lib" path="lib/netty-buffer-4.2.6.Final-sources.jar"/>
+	<classpathentry kind="lib" path="lib/netty-codec-base-4.2.6.Final.jar"/>
+	<classpathentry kind="lib" path="lib/netty-codec-base-4.2.6.Final-sources.jar"/>
+	<classpathentry kind="lib" path="lib/netty-codec-compression-4.2.6.Final.jar"/>
+	<classpathentry kind="lib" path="lib/netty-codec-compression-4.2.6.Final-sources.jar"/>
+	<classpathentry kind="lib" path="lib/netty-codec-http-4.2.6.Final.jar"/>
+	<classpathentry kind="lib" path="lib/netty-codec-http-4.2.6.Final-sources.jar"/>
+	<classpathentry kind="lib" path="lib/netty-common-4.2.6.Final.jar"/>
+	<classpathentry kind="lib" path="lib/netty-common-4.2.6.Final-sources.jar"/>
+	<classpathentry kind="lib" path="lib/netty-handler-4.2.6.Final.jar"/>
+	<classpathentry kind="lib" path="lib/netty-handler-4.2.6.Final-sources.jar"/>
+	<classpathentry kind="lib" path="lib/netty-resolver-4.2.6.Final.jar"/>
+	<classpathentry kind="lib" path="lib/netty-resolver-4.2.6.Final-sources.jar"/>
+	<classpathentry kind="lib" path="lib/netty-transport-4.2.6.Final.jar"/>
+	<classpathentry kind="lib" path="lib/netty-transport-4.2.6.Final-sources.jar"/>
+	<classpathentry kind="lib" path="lib/netty-transport-native-unix-common-4.2.6.Final.jar"/>
+	<classpathentry kind="lib" path="lib/netty-transport-native-unix-common-4.2.6.Final-sources.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-api-1.54.0.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-api-1.54.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-common-1.54.0.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-common-1.54.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-context-1.54.0.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-context-1.54.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-exporter-logging-1.54.0.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-exporter-logging-1.54.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-1.54.0.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-1.54.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-common-1.54.0.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-common-1.54.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-extension-autoconfigure-1.54.0.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-extension-autoconfigure-1.54.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-extension-autoconfigure-spi-1.54.0.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-extension-autoconfigure-spi-1.54.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-logs-1.54.0.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-logs-1.54.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-metrics-1.54.0.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-metrics-1.54.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-trace-1.54.0.jar"/>
+	<classpathentry kind="lib" path="lib/opentelemetry-sdk-trace-1.54.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/poi-5.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-5.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-lite-5.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-4.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/reactive-streams-1.0.3.jar"/>
+	<classpathentry kind="lib" path="lib/reactive-streams-1.0.3-sources.jar"/>
+	<classpathentry kind="lib" path="lib/rxjava-3.1.8.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-api-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-api-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-chrome-driver-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-chrome-driver-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-chromium-driver-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-chromium-driver-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-devtools-v138-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-devtools-v138-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-devtools-v139-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-devtools-v139-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-devtools-v140-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-devtools-v140-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-edge-driver-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-edge-driver-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-firefox-driver-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-firefox-driver-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-grid-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-grid-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-http-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-http-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-ie-driver-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-ie-driver-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-java-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-java-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-json-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-json-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-manager-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-manager-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-os-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-os-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-remote-driver-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-remote-driver-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-safari-driver-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-safari-driver-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-server-4.25.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-server-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-support-4.36.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-support-4.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-2.0.9.jar"/>
+	<classpathentry kind="lib" path="lib/testng-7.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/tomlj-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/tomlj-1.1.1-sources.jar"/>
+	<classpathentry kind="lib" path="lib/xmlbeans-5.2.1.jar"/>
+	<classpathentry kind="src" path=".apt_generated">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path=".apt_generated_tests">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
