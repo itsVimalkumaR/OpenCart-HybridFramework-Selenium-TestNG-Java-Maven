@@ -1,0 +1,12 @@
+com\opencart\utilities\ExcelUtils.class
+com\opencart\pages\LoginPage.class
+com\opencart\utilities\Log.class
+com\opencart\utilities\WaitUtils.class
+com\opencart\pages\OpenCartConfigPage.class
+com\opencart\utilities\WebDriverFactory.class
+com\opencart\utilities\ExtentTestManager.class
+com\opencart\utilities\AllureTestListener.class
+com\opencart\utilities\ScreenshotUtils.class
+com\opencart\utilities\ConfigReader.class
+com\opencart\utilities\ExtentManager.class
+com\opencart\utilities\DataProviders.class

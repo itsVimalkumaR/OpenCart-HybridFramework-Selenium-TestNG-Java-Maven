@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -44,6 +45,7 @@ public class RegisterPage {
 	/**
 	 * Register with data from Excel row
 	 */
+	@Step("Register with test data: First Name: {firstName}, Last Name: {lastName}, Email: {email}")
 	public void registerWithData(String firstName, String lastName, String email, String phone, String password,
 			String confirmPassword, String privacyPolicy) {
 		ExtentTestManager.logInfo("[STEP] Registering with data: " + firstName + " " + lastName);
@@ -62,6 +64,7 @@ public class RegisterPage {
 	/**
 	 * Validate placeholder texts for all fields
 	 */
+	@Step("Validate placeholde texts for all form fields")
 	public void validateAllPlaceholders() {
 		List<By> fieldLocators = Arrays.asList(locators.FIRST_NAME_INPUT_FIELD, locators.LAST_NAME_INPUT_FIELD,
 				locators.EMAIL_INPUT_FIELD, locators.TELEPHONE_INPUT_FIELD, locators.PASSWORD_INPUT_FIELD,
@@ -82,6 +85,7 @@ public class RegisterPage {
 	/**
 	 * Validate mandatory field indicators (asterisks)
 	 */
+	@Step("Validate mandatory field indicators (red asterisks)")
 	public void validateMandatoryFieldIndicators() {
 		List<By> mandatoryFields = Arrays.asList(locators.FIRST_NAME_INPUT_FIELD, locators.LAST_NAME_INPUT_FIELD,
 				locators.EMAIL_INPUT_FIELD, locators.TELEPHONE_INPUT_FIELD, locators.PASSWORD_INPUT_FIELD,
@@ -91,9 +95,6 @@ public class RegisterPage {
 			boolean hasAsterisk = commonWrapper.hasAsterisk(field);
 			boolean isRequired = commonWrapper.isFieldRequired(field);
 
-			// In a real scenario, we'd use an assertion library (like TestNG's SoftAssert,
-			// which is available via BaseTest)
-			// to verify expected outcomes. For logging, this is fine.
 			ExtentTestManager
 					.logInfo("Field: " + field + " - Has Asterisk: " + hasAsterisk + ", Is Required: " + isRequired);
 		}
@@ -102,6 +103,7 @@ public class RegisterPage {
 	/**
 	 * Validate page metadata
 	 */
+	@Step("Validate page metadata (breadcrumb, heading, URL, title)")
 	public void validatePageMetadata() {
 		String currentUrl = driver.getCurrentUrl();
 		String pageTitle = driver.getTitle();
@@ -113,7 +115,7 @@ public class RegisterPage {
 
 		// Check breadcrumb
 		try {
-			WebElement breadcrumb = waitUtils.waitForElementToBeVisible(By.xpath("//ul[@class='breadcrumb']"));
+			WebElement breadcrumb = waitUtils.waitForElementToBeVisible(locators.BREADCRUMB);
 			ExtentTestManager.logInfo("Breadcrumb present: " + breadcrumb.isDisplayed());
 		} catch (Exception e) {
 			ExtentTestManager.logInfo("Breadcrumb not found: " + e.getMessage());
@@ -123,6 +125,7 @@ public class RegisterPage {
 	/**
 	 * Validate UI layout elements
 	 */
+	@Step("Validate UI layout and design elements")
 	public void validateUILayout() {
 		List<By> uiElements = Arrays.asList(locators.MY_ACCOUNT_DROPDOWN, locators.FIRST_NAME_INPUT_FIELD,
 				locators.LAST_NAME_INPUT_FIELD, locators.EMAIL_INPUT_FIELD, locators.TELEPHONE_INPUT_FIELD,
@@ -148,6 +151,7 @@ public class RegisterPage {
 	 * Safely navigates to the Register page. Handles both logged-in and logged-out
 	 * states.
 	 */
+    @Step("Navigate to registartion page")
 	public void navigateToRegister() {
 		ExtentTestManager.logInfo("[STEP] Navigating to Register page...");
 		try {
@@ -181,6 +185,7 @@ public class RegisterPage {
 	/**
 	 * Direct call to navigateToRegister.
 	 */
+    @Step("Open register page")
 	public void openRegisterPage() {
 		navigateToRegister();
 	}
@@ -188,6 +193,7 @@ public class RegisterPage {
 	/**
 	 * Fill all registration details. (Kept the second version's method)
 	 */
+    @Step("Fill registration form with details: First Name: {firstName}, Last Name: {lastName}, Email: {email}")
 	public void enterDetails(String firstName, String lastName, String email, String phoneNumber, String password,
 			String confirmPassword) {
 		try {
@@ -208,9 +214,9 @@ public class RegisterPage {
 	}
 
 	/**
-	 * Check if the privacy policy checkbox is selected. (Kept the second version's
-	 * method)
+	 * Check if the privacy policy checkbox is selected. (Kept the second version's method)
 	 */
+    @Step("Check privacy policy checkbox state")
 	public boolean isPrivacyPolicyChecked() {
 		try {
 			WebElement checkbox = waitUtils.waitForElementToBeVisible(locators.PRIVACY_POLICY_CHECKBOX);
@@ -226,6 +232,7 @@ public class RegisterPage {
 	/**
 	 * Agree to the privacy policy. (Kept the second version's method)
 	 */
+    @Step("Agree to privacy policy")
 	public void agreePrivacyPolicy() {
 		commonWrapper.clickWhenVisible(locators.PRIVACY_POLICY_CHECKBOX);
 		ExtentTestManager.logPass("Privacy Policy checkbox selected.");
@@ -234,13 +241,15 @@ public class RegisterPage {
 	/**
 	 * Click Continue button. (Kept the second version's method)
 	 */
+    @Step("Click continue button")
 	public void clickContinue() {
 		commonWrapper.clickWhenVisible(locators.CONTINUE_BUTTON);
 		ExtentTestManager.logInfo("Clicked Continue button.");
 	}
 
 	/* ===== Test-Specific Actions (from second version) ===== */
-
+    
+    @Step("Register with mandatory fields only")
 	public void registerWithMandatoryFields() {
 		commonWrapper.clickAndInputValue(locators.FIRST_NAME_INPUT_FIELD, "Vimal");
 		commonWrapper.clickAndInputValue(locators.LAST_NAME_INPUT_FIELD, "Kumar");
@@ -250,10 +259,12 @@ public class RegisterPage {
 		commonWrapper.clickAndInputValue(locators.TELEPHONE_INPUT_FIELD, "9876543210");
 		commonWrapper.clickAndInputValue(locators.PASSWORD_INPUT_FIELD, "Password@123");
 		commonWrapper.clickAndInputValue(locators.CONFIRM_PASSWORD_INPUT_FIELD, "Password@123");
+		
 		agreePrivacyPolicy();
 		clickContinue();
 	}
 
+    @Step("Register with existing email address")
 	public void registerWithExistingEmail() {
 		commonWrapper.clickAndInputValue(locators.FIRST_NAME_INPUT_FIELD, "Yogi");
 		commonWrapper.clickAndInputValue(locators.LAST_NAME_INPUT_FIELD, "B");
@@ -262,10 +273,12 @@ public class RegisterPage {
 		commonWrapper.clickAndInputValue(locators.TELEPHONE_INPUT_FIELD, "9988776655");
 		commonWrapper.clickAndInputValue(locators.PASSWORD_INPUT_FIELD, "Password@123");
 		commonWrapper.clickAndInputValue(locators.CONFIRM_PASSWORD_INPUT_FIELD, "Password@123");
+		
 		agreePrivacyPolicy();
 		clickContinue();
 	}
 
+    @Step("Register with password mismatch")
 	public void registerWithPasswordMismatch() {
 		commonWrapper.clickAndInputValue(locators.FIRST_NAME_INPUT_FIELD, "Shiva");
 		commonWrapper.clickAndInputValue(locators.LAST_NAME_INPUT_FIELD, "B");
@@ -273,10 +286,12 @@ public class RegisterPage {
 		commonWrapper.clickAndInputValue(locators.TELEPHONE_INPUT_FIELD, "9988776655");
 		commonWrapper.clickAndInputValue(locators.PASSWORD_INPUT_FIELD, "Password@123");
 		commonWrapper.clickAndInputValue(locators.CONFIRM_PASSWORD_INPUT_FIELD, "Password@1234");
+		
 		agreePrivacyPolicy();
 		clickContinue();
 	}
 
+    @Step("Register without privacy policy agreement")
 	public void registerWithoutPrivacyPolicy() {
 		commonWrapper.clickAndInputValue(locators.FIRST_NAME_INPUT_FIELD, "Venkat");
 		commonWrapper.clickAndInputValue(locators.LAST_NAME_INPUT_FIELD, "Rajendran");
@@ -284,10 +299,12 @@ public class RegisterPage {
 		commonWrapper.clickAndInputValue(locators.TELEPHONE_INPUT_FIELD, "9988776655");
 		commonWrapper.clickAndInputValue(locators.PASSWORD_INPUT_FIELD, "Password@123");
 		commonWrapper.clickAndInputValue(locators.CONFIRM_PASSWORD_INPUT_FIELD, "Password@123");
+		
 		// Don't agree to privacy policy for this test
 		clickContinue();
 	}
 
+    @Step("Click continue  without entering any data")
 	public void clickContinueWithoutData() {
 		List<By> fields = Arrays.asList(locators.FIRST_NAME_INPUT_FIELD, locators.LAST_NAME_INPUT_FIELD,
 				locators.EMAIL_INPUT_FIELD, locators.TELEPHONE_INPUT_FIELD, locators.PASSWORD_INPUT_FIELD,
@@ -298,6 +315,7 @@ public class RegisterPage {
 		clickContinue();
 	}
 
+    @Step("Register with invalid email format: {email}")
 	public void registerWithInvalidEmail() {
 		commonWrapper.clickAndInputValue(locators.FIRST_NAME_INPUT_FIELD, "At");
 		commonWrapper.clickAndInputValue(locators.LAST_NAME_INPUT_FIELD, "lee");
@@ -305,10 +323,12 @@ public class RegisterPage {
 		commonWrapper.clickAndInputValue(locators.TELEPHONE_INPUT_FIELD, "9988776655");
 		commonWrapper.clickAndInputValue(locators.PASSWORD_INPUT_FIELD, "Passsword@123");
 		commonWrapper.clickAndInputValue(locators.CONFIRM_PASSWORD_INPUT_FIELD, "Passsword@123");
+		
 		agreePrivacyPolicy();
 		clickContinue();
 	}
 
+    @Step("Register with invalid phone number: {phone}")
 	public void registerWithInvalidPhone() {
 		commonWrapper.clickAndInputValue(locators.FIRST_NAME_INPUT_FIELD, "Vimal");
 		commonWrapper.clickAndInputValue(locators.LAST_NAME_INPUT_FIELD, "Kumar");
@@ -316,6 +336,7 @@ public class RegisterPage {
 		commonWrapper.clickAndInputValue(locators.TELEPHONE_INPUT_FIELD, "invalidphone");
 		commonWrapper.clickAndInputValue(locators.PASSWORD_INPUT_FIELD, "Passsword@123");
 		commonWrapper.clickAndInputValue(locators.CONFIRM_PASSWORD_INPUT_FIELD, "Passsword@123");
+		
 		agreePrivacyPolicy();
 		clickContinue();
 	}
@@ -325,6 +346,7 @@ public class RegisterPage {
 	/**
 	 * Utility method to validate a list of error messages.
 	 */
+    @Step("Validate error messages")
 	public void validateErrorMessages(List<By> errorLocators, List<String> expectedMessages,
 			List<String> actualErrors) {
 		for (int i = 0; i < errorLocators.size(); i++) {
@@ -343,12 +365,14 @@ public class RegisterPage {
 		}
 	}
 
+    @Step("Verify registration success message")
 	public void verifyRegistrationSuccessMessage() {
 		WebElement success = waitUtils.waitForElementToBeVisible(locators.SUCCESS_MESSAGE);
 		softAssert.assertTrue(success.isDisplayed(), "Success message not displayed!");
 		softAssert.assertAll();
 	}
 
+    @Step("Verify mandatory field error messages")
 	public void verifyMandatoryFieldErrors() {
 		List<By> errorLocators = Arrays.asList(locators.FIRST_NAME_EMPTY_ERROR, locators.LAST_NAME_EMPTY_ERROR,
 				locators.EMAIL_ERROR, locators.TELEPHONE_ERROR, locators.PASSWORD_ERROR);
@@ -365,24 +389,28 @@ public class RegisterPage {
 		validateErrorMessages(errorLocators, expectedErrors, actualErrors);
 	}
 
+    @Step("Verify duplicate email error")
 	public void verifyDuplicateEmailError() {
 		WebElement error = waitUtils.waitForElementToBeVisible(locators.EMAIL_EXISTS_ERROR);
 		softAssert.assertTrue(error.isDisplayed(), "Duplicate email warning not shown!");
 		softAssert.assertAll();
 	}
 
+    @Step("Verify password mismatch error")
 	public void verifyPasswordMismatchError() {
 		WebElement error = waitUtils.waitForElementToBeVisible(locators.PASSWORD_MISMATCH_ERROR);
 		softAssert.assertTrue(error.isDisplayed(), "Password mismatch error not shown!");
 		softAssert.assertAll();
 	}
 
+    @Step("Verify privacy policy error")
 	public void verifyPrivacyPolicyError() {
 		WebElement warning = waitUtils.waitForElementToBeVisible(locators.WARNING_ALERT);
 		softAssert.assertTrue(warning.isDisplayed(), "Privacy policy warning not displayed!");
 		softAssert.assertAll();
 	}
 
+    @Step("Verify invalid email error for: {0}")
 	public void verifyInvalidEmailError() {
 		try {
 			// Get the current value in the email field for debugging
@@ -390,7 +418,7 @@ public class RegisterPage {
 			ExtentTestManager.logInfo("Email field value: '" + emailValue + "'");
 
 			// Wait a moment for any validation to trigger
-			waitUtils.sleep(1000);
+			WaitUtils.sleep(1000);
 
 			boolean validationFound = false;
 
@@ -475,6 +503,7 @@ public class RegisterPage {
 		softAssert.assertAll();
 	}
 
+    @Step("Verify invalid phone error for: {0}")
 	public void verifyInvalidPhoneError() {
 	    try {
 	        // Get the current value in the phone field
@@ -542,6 +571,7 @@ public class RegisterPage {
 	/**
 	 * Get error messages for validation
 	 */
+    @Step("Get all error messages from the form")
 	public List<String> getErrorMessages() {
 		List<String> errors = new ArrayList<>();
 		List<By> errorLocators = Arrays.asList(locators.FIRST_NAME_ERROR, locators.LAST_NAME_ERROR,
@@ -563,6 +593,7 @@ public class RegisterPage {
 	/**
 	 * Get specific message
 	 */
+    @Step("Get error message for locator: {locator}")
 	public String getErrorMessage(By locator) {
 		try {
 			return commonWrapper.getElementText(locator);
@@ -575,6 +606,7 @@ public class RegisterPage {
 	 * Validate registration success message. (Slightly improved version from the
 	 * second class)
 	 */
+    @Step("Verify registration success")
 	public boolean isRegistrationSuccess() {
 		try {
 			ExtentTestManager.logInfo("[STEP] Validating registration success message...");
@@ -591,6 +623,7 @@ public class RegisterPage {
 	/**
 	 * Get success message text.
 	 */
+    @Step("Get registration success message")
 	public String getSuccessMessage() {
 		return commonWrapper.getElementText(locators.SUCCESS_MESSAGE);
 	}
@@ -598,6 +631,7 @@ public class RegisterPage {
 	/**
 	 * Get warning alert text.
 	 */
+    @Step("Get warning message")
 	public String getWarningMessage() {
 	    try {
 	        // Try with shorter timeout first
@@ -617,6 +651,7 @@ public class RegisterPage {
 	/**
 	 * Navigate back to Home page after logout (safe flow).
 	 */
+    @Step("Navigate to home page after logout")
 	public void navigateToHomeAfterLogout() {
 		ExtentTestManager.logInfo("[STEP] Navigating to Home page after logout...");
 		try {
@@ -655,8 +690,8 @@ public class RegisterPage {
 		}
 	}
 
+    @Step("Validate field constraints and character limits")
 	public void validateFieldConstraints() {
-		// TODO Auto-generated method stub
-
+    	ExtentTestManager.logInfo("Field constraints validation - to be implemented");
 	}
 }

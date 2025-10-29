@@ -1,0 +1,5 @@
+# Created at 2025-10-29T16:27:29.064
+Boot Manifest-JAR contains absolute paths in classpath 'D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

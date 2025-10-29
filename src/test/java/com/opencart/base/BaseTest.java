@@ -21,10 +21,11 @@ import com.opencart.utilities.ExtentManager;
 import com.opencart.utilities.ExtentTestManager;
 import com.opencart.utilities.Log;
 import com.opencart.utilities.TestListener;
+import com.opencart.utilities.AllureTestListener;
 import com.opencart.utilities.WaitUtils;
 import com.opencart.utilities.WebDriverFactory;
 
-@Listeners(TestListener.class)
+//@Listeners({TestListener.class, AllureTestListener.class})
 public class BaseTest {
 
 	protected WebDriver driver;

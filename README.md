@@ -1,9 +1,9 @@
 # OpenCart Test Automation Framework
 
 ![Java](https://img.shields.io/badge/Java-17-blue)
-![TestNG](https://img.shields.io/badge/TestNG-7.6-red)
-![Selenium](https://img.shields.io/badge/Selenium-4.0-green)
-![Maven](https://img.shields.io/badge/Maven-3.8-orange)
+![TestNG](https://img.shields.io/badge/TestNG-7.11.0-red)
+![Selenium](https://img.shields.io/badge/Selenium-4.25.0-green)
+![Maven](https://img.shields.io/badge/Maven-3.13.0-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![DataDriven](https://img.shields.io/badge/Data-Driven-ff69b4)
 ![Hybrid](https://img.shields.io/badge/Framework-Hybrid-blueviolet)
@@ -40,7 +40,7 @@ Supports **Hybrid + Data-driven approach** for flexible and reusable test script
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/itsVimalkumaR/OpenCart-HybridFramework-Selenium-TestNG-Java-Maven.git
+  git clone https://github.com/itsVimalkumaR/OpenCart-HybridFramework-Selenium-TestNG-Java-Maven.git
 ```
    
 2. Import the project as a **Maven project** in your IDE.
@@ -48,7 +48,7 @@ git clone https://github.com/itsVimalkumaR/OpenCart-HybridFramework-Selenium-Tes
 3. Resolve Maven dependencies:
 
 ```bash
-mvn clean install
+  mvn clean install
 ```
 
 ---
@@ -82,13 +82,28 @@ OR
 **Run via Maven**:
 
 ```bash
-mvn test -DtestngXml=testing.xml
+  mvn test -DtestngXml=testing.xml
 ```
+
+OR
+
+**Clean and run tests**
+```bash
+    mvn clean test
+```
+
+OR
 
 **Run Specific Test Class**
 
 ```bash
-mvn test -Dtest=LoginTest
+  mvn test -Dtest=LoginTest
+```
+OR 
+
+**Run with specific browser**
+```bash
+    mvn clean test -Dbrowser=chrome
 ```
 
 **Reports**
@@ -96,6 +111,48 @@ mvn test -Dtest=LoginTest
 - **TestNG reports**: `target/surefire-reports/index.html`
 
 - **Screenshots**: `target/screenshots/` (on test failures)
+
+- **Generate Report**:
+```bash
+# Generate report from results
+  allure generate target/allure-results -o target/allure-reports --clean
+
+# Generate report with specific configuration
+  allure generate --clean target/allure-results -o target/allure-reports
+
+# Serve on specific port
+  allure serve target/allure-results --port 8080
+
+# Generate report with custom categories
+  allure generate --categories categories.json target/allure-results
+
+# Open existing report
+  allure open target/allure-reports
+
+# Serve report (opens in browser)
+  allure serve target/allure-results
+```
+
+- **Using Maven Commands**:
+```bash
+# Generate report using Maven plugin
+  mvn allure:report
+```
+
+```bash
+# Serve report using Maven plugin
+  mvn allure:serve
+```
+
+- **Advanced Allure Configuration**:
+
+**Create `allure.properties` file in `src/test/resources`:**
+```properties
+allure.results.directory=target/allure-results
+allure.link.issue.pattern=https://example.com/issue/{}
+allure.link.tms.pattern=https://example.com/tms/{}
+allure.attachment.directory=target/allure-attachments
+```
 
 ---
 
@@ -139,7 +196,7 @@ This project is licensed under the **MIT License**. See `LICENSE` for details.
 
 ## Contact
 
-For questions or contributions, contact: vimalkumarm523@gmail.com
+For questions or contributions, contact: [vimalkumarm523@gmail.com](vimalkumarm523@gmail.com)
 
 ---
 
