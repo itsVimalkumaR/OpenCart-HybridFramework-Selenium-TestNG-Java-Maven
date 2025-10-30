@@ -22,8 +22,8 @@ public class BaseLocators {
 	public final By REGISTER_LINK = By.xpath("//a[text()='Register']");
 	public final By PAGE_HEADING = By.xpath("//h1[contains(text(),'Register Account')]");
     public final By BREADCRUMB = By.className("breadcrumb");
-	public final By LOGOUT_LINK = By.xpath("//a[text()='Logout']");
-	public final By LOGIN_LINK = By.xpath("//a[text()='Login']");
+	public final By LOGOUT_LINK = By.xpath("//a[contains(text(), 'Logout')]");
+	public final By LOGIN_LINK = By.xpath("//a[contains(text(), 'Login')]");
 
 	/* ---------- Register Page Fields --------- */
 	public final By FIRST_NAME_INPUT_FIELD = By.id("input-firstname");
@@ -37,8 +37,18 @@ public class BaseLocators {
 	public final By NEWSLATTER_NO = By.xpath("//input[@name='newsletter' and @value='0']");
 	public final By PRIVACY_POLICY_CHECKBOX = By.name("agree");
 	public final By CONTINUE_LINK_BUTTON = By.xpath("//div[@class='pull-right']//a[.='Continue']");
-	public final By CONTINUE_BUTTON = By.xpath("//*[@value='Continue']");
+	public final By CONTINUE_BUTTON = By.xpath("//*[contains(text(), 'Continue')]");
 
+	 // Login Page Locators
+    public By LOGIN_BUTTON = By.xpath("//input[@value='Login']");
+    public By FORGOTTEN_PASSWORD_LINK = By.xpath("//a[contains(text(), 'Forgotten Password')]");
+    public By ACCOUNT_PAGE_HEADING = By.xpath("//h2[contains(text(), 'My Account')]");
+    
+    // Additional locators for comprehensive testing
+    public By LOGIN_PAGE_HEADING = By.xpath("//h2[contains(text(), 'Login')]");
+    public By NEW_CUSTOMER_SECTION = By.xpath("//h2[contains(text(), 'New Customer')]");
+    public By RETURNING_CUSTOMER_SECTION = By.xpath("//h2[contains(text(), 'Returning Customer')]");
+	
 	/* --------------- Error Messages & Alerts ----------- */
 	public final By SUCCESS_MESSAGE = By.xpath("//div[@id='content']//p[contains(text(), 'Congratulations!')]");
 	public final By WARNING_ALERT = By.cssSelector(".alert.alert-danger");

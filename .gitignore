@@ -1,4 +1,5 @@
 /.settings
-/allure-results
 /.project
 /.idea
+/reports
+/target

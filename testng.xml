@@ -6,9 +6,15 @@
         <listener class-name="io.qameta.allure.testng.AllureTestNg" />
     </listeners>
     
-    <test name="Registration Tests">
+<!--    <test name="Registration Tests">
         <classes>
-            <class name="com.opencart.tests.RegisterTests" />
+            <class name="com.opencart.tests.RegisterTests"/>
+        </classes>
+    </test>-->
+    
+    <test name="Login Tests">
+        <classes>
+            <class name="com.opencart.tests.LoginTests"/>
         </classes>
     </test>
 </suite>

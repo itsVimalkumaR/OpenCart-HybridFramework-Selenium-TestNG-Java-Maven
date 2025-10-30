@@ -1,7 +1,0 @@
-java.lang.AssertionError: The following asserts failed:
-	No email validation detected for value: ''. Expected HTML5 validation, JavaScript validation, or server-side error. expected [true] but found [false],
-	Invalid email warning (via CommonWrapper) not shown! expected [true] but found [false],
-	Email validation message (via HTML5) not as expected! expected [true] but found [false],
-	Email field incorrectly reported as valid! expected [false] but found [true],
-	Invalid email warning (via CommonWrapper) not shown! expected [true] but found [false],
-	Email validation message (via HTML5) not as expected! expected [true] but found [false]

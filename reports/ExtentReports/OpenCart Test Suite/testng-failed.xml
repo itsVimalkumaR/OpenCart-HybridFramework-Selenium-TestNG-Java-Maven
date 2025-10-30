@@ -6,18 +6,22 @@
     <listener class-name="com.opencart.utilities.AllureTestListener"/>
     <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
   </listeners>
-  <test thread-count="5" name="Registration Tests(failed)" verbose="0">
+  <test thread-count="5" name="Login Tests(failed)" verbose="0">
     <classes>
-      <class name="com.opencart.tests.RegisterTests">
+      <class name="com.opencart.tests.LoginTests">
         <methods>
           <include name="setupClass"/>
           <include name="tearDownClass"/>
           <include name="afterSuite"/>
-          <include name="setupTest"/>
-          <include name="testInvalidEmailFormat" invocation-numbers="0 3"/>
+          <include name="tearDown"/>
+          <include name="testPlaceholderTexts"/>
+          <include name="setup"/>
           <include name="beforeSuite"/>
+          <include name="testDataDrivenLogin" invocation-numbers="1 3 5"/>
+          <include name="testBrowserBackAfterLogout"/>
+          <include name="testMultipleUnsuccessfulLogins"/>
         </methods>
-      </class> <!-- com.opencart.tests.RegisterTests -->
+      </class> <!-- com.opencart.tests.LoginTests -->
     </classes>
-  </test> <!-- Registration Tests(failed) -->
+  </test> <!-- Login Tests(failed) -->
 </suite> <!-- Failed suite [OpenCart Test Suite] -->

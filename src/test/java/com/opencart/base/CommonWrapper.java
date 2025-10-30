@@ -33,11 +33,19 @@ public class CommonWrapper extends BaseTest {
 	protected WaitUtils waitUtils;
 	protected Actions actions;
 
-	public CommonWrapper(WebDriver driver) {
-		this.driver = driver;
-		this.waitUtils = new WaitUtils(driver);
-		this.actions = new Actions(driver);
-	}
+	// Constructor with all dependencies
+    public CommonWrapper(WebDriver driver, WaitUtils waitUtils, BaseLocators locators) {
+        this.driver = driver;
+        this.waitUtils = waitUtils;
+        this.locators = locators;
+    }
+
+    // Add an additional constructor with only WebDriver for backward compatibility
+    public CommonWrapper(WebDriver driver) {
+        this.driver = driver;
+        this.waitUtils = new WaitUtils(driver);
+        this.locators = new BaseLocators(driver);
+    }
 
 	public WebDriverWait getWait(WebDriver driver, int seconds) {
 		return new WebDriverWait(driver, Duration.ofSeconds(seconds));
@@ -111,9 +119,18 @@ public class CommonWrapper extends BaseTest {
 	public void clickAndInputValue(By locator, String value) {
 		try {
 			WebElement element = waitUtils.waitForElementToBeVisible(locator);
+			element.click();
 			element.clear();
-			element.sendKeys(value);
-			ExtentTestManager.logPass("Entered value '" + value + "' into element: " + locator);
+			
+			// Add null check for value
+			if (value != null && !value.trim().isEmpty()) {
+				element.sendKeys(value);
+				logger.info("Entered value: '" + value + "' in element: " + locator);
+				ExtentTestManager.logPass("Entered value '" + value + "' into element: " + locator);
+			} else {
+				ExtentTestManager.logFail("Attempted to send null or empty value to element: " + locator, driver);
+				// Optionally, you can throw an exception or just log warning
+			}
 		} catch (Exception e) {
 			ExtentTestManager.logFail("Unable to enter value into element: " + locator + " - " + e.getMessage(),
 					driver);

@@ -5816,3 +5816,10 @@ Session ID: 79607941ddf3e6f6732c66d407179d9d
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 2025-10-29 21:36:48 INFO  BaseTest:54 - [INFO] Extent report flushed successfully.
 2025-10-29 21:36:48 INFO  WebDriverFactory:86 - [INFO] WebDriver closed successfully.
+2025-10-30 14:23:03 INFO  BaseTest:46 - [INFO] Log4j configured successfully.
+2025-10-30 14:23:04 INFO  ConfigReader:23 - [INFO] config.properties loaded successfully from: D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven/src/test/resources/config.properties
+2025-10-30 14:23:09 INFO  WebDriverFactory:68 - [INFO] 'chrome' launched and navigated to: https://opencart.abstracta.us/
+2025-10-30 14:23:09 INFO  Log:20 - Log4j successfully initialized from: D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven\\config\log4j.properties
+2025-10-30 14:23:12 INFO  BaseTest:82 - [INFO] Excel loaded: D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven/src/test/resources/testdata.xlsx
+2025-10-30 14:23:13 INFO  WebDriverFactory:86 - [INFO] WebDriver closed successfully.
+2025-10-30 14:23:13 INFO  BaseTest:54 - [INFO] Extent report flushed successfully.

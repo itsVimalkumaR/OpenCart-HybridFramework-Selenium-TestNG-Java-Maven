@@ -1,7 +1,8 @@
 D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven\src\test\java\com\opencart\base\BaseLocators.java
 D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven\src\test\java\com\opencart\base\BaseTest.java
 D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven\src\test\java\com\opencart\base\CommonWrapper.java
+D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven\src\test\java\com\opencart\pages\LoginPage.java
 D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven\src\test\java\com\opencart\pages\RegisterPage.java
-D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven\src\test\java\com\opencart\tests\LoginTest.java
+D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven\src\test\java\com\opencart\tests\LoginTests.java
 D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven\src\test\java\com\opencart\tests\RegisterTests.java
 D:\VKCodeAssure\GitHub\OpenCart-HybridFramework-Selenium-TestNG-Java-Maven\src\test\java\com\opencart\utilities\TestListener.java

@@ -11,8 +11,7 @@ public class Log {
 
     static {
         try {
-            String log4jPath = System.getProperty("user.dir") + File.separator + File.separator + "config" + File.separator + "log4j.properties";
-            System.out.println("--> " + log4jPath + "<--");
+            String log4jPath = System.getProperty("user.dir") + "/src/test/resources/log4j.properties";
             PropertyConfigurator.configure(log4jPath);
 
             // Console confirmation message
@@ -23,23 +22,23 @@ public class Log {
         }
     }
 
-    public static void info(String msg) {
-        logger.info(msg);
-    }
-
-    public static void warn(String msg) {
-        logger.warn(msg);
-    }
-
-    public static void error(String msg) {
-        logger.error(msg);
-    }
-
-    public static void debug(String msg) {
-        logger.debug(msg);
-    }
-
-    public static void fatal(String msg) {
-        logger.fatal(msg);
-    }
+//    public static void info(String msg) {
+//        logger.info(msg);
+//    }
+//
+//    public static void warn(String msg) {
+//        logger.warn(msg);
+//    }
+//
+//    public static void error(String msg) {
+//        logger.error(msg);
+//    }
+//
+//    public static void debug(String msg) {
+//        logger.debug(msg);
+//    }
+//
+//    public static void fatal(String msg) {
+//        logger.fatal(msg);
+//    }
 }

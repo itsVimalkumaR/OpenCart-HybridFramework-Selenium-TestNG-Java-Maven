@@ -25,7 +25,7 @@ import com.opencart.utilities.AllureTestListener;
 import com.opencart.utilities.WaitUtils;
 import com.opencart.utilities.WebDriverFactory;
 
-//@Listeners({TestListener.class, AllureTestListener.class})
+@Listeners({ TestListener.class, AllureTestListener.class })
 public class BaseTest {
 
 	protected WebDriver driver;
@@ -42,9 +42,20 @@ public class BaseTest {
 
 	@BeforeSuite(alwaysRun = true)
 	public void beforeSuite() {
-		PropertyConfigurator.configure(System.getProperty("user.dir") + "/src/test/resources/log4j.properties");
-		logger.info("[INFO] Log4j configured successfully.");
-		ExtentManager.getInstance();
+		try {
+			// Configure Log4j
+			String log4jPath = System.getProperty("user.dir") + "/src/test/resources/log4j.properties";
+
+			PropertyConfigurator.configure(log4jPath);
+			logger.info("[INFO] Log4j configured successfully from: " + log4jPath);
+
+			// Initialize Extent Reports
+			ExtentManager.getInstance();
+			logger.info("[INFO] Extent Reports initialized successfully");
+		} catch (Exception e) {
+			logger.error("[ERROR] During suite setup: " + e.getMessage(), e);
+			throw new RuntimeException("Suite setup failed", e);
+		}
 	}
 
 	@AfterSuite(alwaysRun = true)
@@ -53,7 +64,7 @@ public class BaseTest {
 			ExtentTestManager.flushReport();
 			logger.info("[INFO] Extent report flushed successfully.");
 		} catch (Exception e) {
-			logger.error("[ERROR] While flushing Extent report: " + e.getMessage());
+			logger.error("[ERROR] While flushing Extent report: " + e.getMessage(), e);
 		} finally {
 			if (driver != null) {
 				WebDriverFactory.quitDriver();
@@ -63,43 +74,146 @@ public class BaseTest {
 
 	@BeforeClass(alwaysRun = true)
 	public void setupClass() throws IOException {
-		driver = WebDriverFactory.createDriver(ConfigReader.getBrowser());
-		config = new ConfigReader();
-		log = new Log();
-		softAssert = new SoftAssert();
-		actions = new Actions(driver);
-		waitUtils = new WaitUtils(driver);
+		try {
+			logger.info("[INFO] Starting test class setup...");
 
-		// Initialize page objects
-		locators = new BaseLocators(driver);
-		commonWrapper = new CommonWrapper(driver); // This should properly initialize
+			// Initialize WebDriver
+			driver = WebDriverFactory.createDriver(ConfigReader.getBrowser());
+			logger.info("[INFO] WebDriver initialized successfully");
+
+			// Initialize utilities
+			softAssert = new SoftAssert();
+			actions = new Actions(driver);
+			waitUtils = new WaitUtils(driver);
+			logger.info("[INFO] Utilities initilaized successfully");
+
+			// Initialize page objects
+			locators = new BaseLocators(driver);
+			commonWrapper = new CommonWrapper(driver);
+//			commonWrapper = new CommonWrapper(driver, waitUtils, locators);
+			logger.info("[INFO] Page objects initialized successfully");
+
+			// Other utilities
+			initializeExcelUtils();
+			config = new ConfigReader();
+			log = new Log();
+
+			logger.info("[INFO] Test class setup completed successfully");
+
+		} catch (Exception e) {
+			logger.error("[ERROR] During test class setup: " + e.getMessage(), e);
+			// Clean up resources if setup fails
+			if (driver != null) {
+				WebDriverFactory.quitDriver();
+			}
+			throw new RuntimeException("Test class setup failed", e);
+		}
+	}
+
+	/**
+	 * Initialize Excel utilities with proper error handling
+	 */
+	private void initializeExcelUtils() {
 
 		try {
 			String excelPath = System.getProperty("user.dir") + "/src/test/resources/testdata.xlsx";
 			File file = new File(excelPath);
-			if (file.exists()) {
+
+			if (file.exists() && !file.isDirectory()) {
 				excelUtils = new ExcelUtils(excelPath, "Data");
-				logger.info("[INFO] Excel loaded: " + excelPath);
+				logger.info("[INFO] Excel utilities initialized: " + excelPath);
+
+				// Test data loading
+				int rowCount = excelUtils.getRowCount();
+				logger.info("[INFO] Excel sheet conatins " + rowCount + " rows of test data");
 			} else {
-				logger.warn("[WARNING] Excel file not found: " + excelPath);
+				logger.warn("[WARNING] Excel file not found or is directory: " + excelPath);
+				excelUtils = null;
 			}
 		} catch (Exception e) {
-			logger.error("[ERROR] Excel initialization failed: " + e.getMessage());
+			logger.error("[ERROR] Excel utilities initialization failed: " + e.getMessage(), e);
+			excelUtils = null;
 		}
 	}
 
 	@AfterClass(alwaysRun = true)
 	public void tearDownClass() {
-		if (softAssert != null) {
-			softAssert.assertAll();
-		}
-		if (driver != null) {
-			WebDriverFactory.quitDriver();
+		try {
+			logger.info("[INFO] Starting test class teardown...");
+
+			// Assert all soft assertions
+			if (softAssert != null) {
+				softAssert.assertAll();
+				logger.info("[INFO] Soft assertions validated");
+			}
+
+			// Close WebDriver
+			if (driver != null) {
+				WebDriverFactory.quitDriver();
+				logger.info("[INFO] WebDriver closed successfiully");
+			}
+
+			logger.info("[INFO] Test class teardown completed successfully");
+		} catch (Exception e) {
+			logger.error("[ERROR] During test class teardown: " + e.getMessage(), e);
 		}
 	}
 
-	// Provide getter for driver
+// ========== GETTER METHODS ==========
+
+	/**
+	 * Get WebDriver instance
+	 */
 	public WebDriver getDriver() {
 		return driver;
+	}
+
+	/**
+	 * Get SoftAssert instance
+	 */
+	public SoftAssert getSoftAssert() {
+		return softAssert;
+	}
+
+	/**
+	 * Get WaitUtils instance
+	 */
+	public WaitUtils getWaitUtils() {
+		return waitUtils;
+	}
+
+	/**
+	 * Get CommonWrapper instance
+	 */
+	public CommonWrapper getCommonWrapper() {
+		return commonWrapper;
+	}
+
+	/**
+	 * Get BaseLocators instance
+	 */
+	public BaseLocators getLocators() {
+		return locators;
+	}
+
+	/**
+	 * Get ExcelUtils instance
+	 */
+	public ExcelUtils getExcelUtils() {
+		return excelUtils;
+	}
+
+	/**
+	 * Get base URL from configuration
+	 */
+	public String getBaseUrl() {
+		return ConfigReader.getUrl();
+	}
+
+	/**
+	 * Check if Excel data is available
+	 */
+	public boolean isExcelDataAvailable() {
+		return excelUtils != null;
 	}
 }

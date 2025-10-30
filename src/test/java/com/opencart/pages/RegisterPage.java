@@ -14,6 +14,7 @@ import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
 
 import com.opencart.base.BaseLocators;
+import com.opencart.base.BaseTest;
 import com.opencart.base.CommonWrapper;
 import com.opencart.utilities.ExtentTestManager;
 import com.opencart.utilities.WaitUtils;
@@ -21,13 +22,13 @@ import com.opencart.utilities.WaitUtils;
 /**
  * RegisterPage - Handles navigation and actions on the Register page.
  */
-public class RegisterPage {
+public class RegisterPage extends BaseTest{
 
-	protected WebDriver driver;
-	protected SoftAssert softAssert;
-	protected WaitUtils waitUtils;
-	protected BaseLocators locators;
-	protected CommonWrapper commonWrapper;
+//	protected WebDriver driver;
+//	protected SoftAssert softAssert;
+//	protected WaitUtils waitUtils;
+//	protected BaseLocators locators;
+//	protected CommonWrapper commonWrapper;
 
 	protected String email;
 
@@ -38,6 +39,7 @@ public class RegisterPage {
 		this.waitUtils = new WaitUtils(driver);
 		this.locators = new BaseLocators(driver);
 		this.commonWrapper = new CommonWrapper(driver);
+//		this.commonWrapper = new CommonWrapper(driver, waitUtils, locators); // FIXED: Pass all parameters
 	}
 
 	/* === Data-Driven & UI Validation Methods (from first version) === */

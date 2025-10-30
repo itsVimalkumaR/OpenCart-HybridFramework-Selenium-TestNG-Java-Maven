@@ -1,7 +1,8 @@
-com\opencart\pages\RegisterPage.class
 com\opencart\base\BaseLocators.class
-com\opencart\base\CommonWrapper.class
 com\opencart\utilities\TestListener.class
 com\opencart\tests\RegisterTests.class
-com\opencart\tests\LoginTest.class
+com\opencart\tests\LoginTests.class
+com\opencart\pages\RegisterPage.class
+com\opencart\pages\LoginPage.class
+com\opencart\base\CommonWrapper.class
 com\opencart\base\BaseTest.class

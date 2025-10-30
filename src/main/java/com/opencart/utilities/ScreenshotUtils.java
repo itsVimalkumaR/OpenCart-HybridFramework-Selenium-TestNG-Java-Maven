@@ -40,5 +40,10 @@ public class ScreenshotUtils {
 			return null;
 		}
 	}
+	
+	public static void capturedScreenshot(WebDriver driver, String message) {
+		String screenshotPath = ScreenshotUtils.captureScreenshot(driver, ExtentTestManager.getTest().getModel().getName());
+        ExtentTestManager.logInfo(message+ ": " + screenshotPath);
+	}
 }
 

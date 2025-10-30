@@ -1,847 +1,732 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="37" passed="34" failed="2" skipped="0">
+<testng-results ignored="2" total="37" passed="29" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-29T21:15:53 IST" name="OpenCart Test Suite" finished-at="2025-10-29T21:36:46 IST" duration-ms="1253247">
+  <suite started-at="2025-10-30T21:45:15 IST" name="OpenCart Test Suite" finished-at="2025-10-30T21:58:44 IST" duration-ms="809524">
     <groups>
     </groups>
-    <test started-at="2025-10-29T21:15:53 IST" name="Registration Tests" finished-at="2025-10-29T21:36:46 IST" duration-ms="1253247">
-      <class name="com.opencart.tests.RegisterTests">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:15:52 IST" name="beforeSuite" finished-at="2025-10-29T21:15:53 IST" duration-ms="460" status="PASS">
+    <test started-at="2025-10-30T21:45:15 IST" name="Login Tests" finished-at="2025-10-30T21:58:44 IST" duration-ms="809524">
+      <class name="com.opencart.tests.LoginTests">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:45:14 IST" name="beforeSuite" finished-at="2025-10-30T21:45:15 IST" duration-ms="472" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setupClass()[pri:0, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:15:53 IST" name="setupClass" finished-at="2025-10-29T21:16:06 IST" duration-ms="12507" status="PASS">
+        <test-method is-config="true" signature="setupClass()[pri:0, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:45:15 IST" name="setupClass" finished-at="2025-10-30T21:45:27 IST" duration-ms="11359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupClass -->
-        <test-method is-config="true" signature="setupTest()[pri:0, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:16:06 IST" name="setupTest" finished-at="2025-10-29T21:16:06 IST" duration-ms="257" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:45:27 IST" name="setup" finished-at="2025-10-30T21:45:27 IST" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupTest -->
-        <test-method signature="testPlaceholderTexts()[pri:1, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:16:06 IST" name="testPlaceholderTexts" description="Validate placeholder texts in registration form fields" finished-at="2025-10-29T21:16:19 IST" duration-ms="12603" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="testValidLogin()[pri:1, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:45:27 IST" name="testValidLogin" description="Validate logging into the application using valid credentials" finished-at="2025-10-30T21:45:49 IST" duration-ms="22566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method signature="testValidLoginWithLastRowData(java.lang.String,java.lang.String)[pri:1, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:45:49 IST" name="testValidLoginWithLastRowData" description="Validate logging into the application using valid credentials from last Excel row" data-provider="LastRowLoginData" finished-at="2025-10-30T21:46:05 IST" duration-ms="15078" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vk636485@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Vimalutr16@]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLoginWithLastRowData -->
+        <test-method signature="testInvalidEmailAndPassword()[pri:2, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:46:05 IST" name="testInvalidEmailAndPassword" description="Validate logging into the application using invalid credentials" finished-at="2025-10-30T21:46:10 IST" duration-ms="5894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmailAndPassword -->
+        <test-method signature="testInvalidEmailValidPassword()[pri:3, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:46:10 IST" name="testInvalidEmailValidPassword" description="Validate login with invalid email address and valid password" finished-at="2025-10-30T21:46:23 IST" duration-ms="12573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmailValidPassword -->
+        <test-method signature="testValidEmailInvalidPassword()[pri:4, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:46:23 IST" name="testValidEmailInvalidPassword" description="Validate login with valid email address and invalid password" finished-at="2025-10-30T21:46:35 IST" duration-ms="12462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidEmailInvalidPassword -->
+        <test-method signature="testEmptyCredentials()[pri:5, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:46:35 IST" name="testEmptyCredentials" description="Validate login without entering any credentials" finished-at="2025-10-30T21:46:48 IST" duration-ms="12905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyCredentials -->
+        <test-method signature="testForgottenPasswordLink()[pri:7, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:46:48 IST" name="testForgottenPasswordLink" description="Validate the Forgotten Password link functionality" finished-at="2025-10-30T21:47:10 IST" duration-ms="21657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgottenPasswordLink -->
+        <test-method signature="testKeyboardNavigationLogin()[pri:8, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:47:10 IST" name="testKeyboardNavigationLogin" description="Validate login using keyboard navigation" finished-at="2025-10-30T21:48:05 IST" duration-ms="55126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testKeyboardNavigationLogin -->
+        <test-method signature="testPlaceholderTexts()[pri:9, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:48:05 IST" name="testPlaceholderTexts" description="Validate placeholder texts in login form fields" finished-at="2025-10-30T21:48:36 IST" duration-ms="30674" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Failed to navigate to Login page]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Failed to navigate to Login page
+at com.opencart.pages.LoginPage.navigateToLogin(LoginPage.java:70)
+at com.opencart.tests.LoginTests.testPlaceholderTexts(LoginTests.java:339)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(), 'Login')] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\vimal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63541}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63541/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b57aa99404cb743aed19b4cb086b88a2
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.opencart.utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:56)
+at com.opencart.pages.LoginPage.navigateToLogin(LoginPage.java:56)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPlaceholderTexts -->
-        <test-method signature="testMandatoryFieldIndicators()[pri:2, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:16:19 IST" name="testMandatoryFieldIndicators" description="Validate mandatory field indicators" finished-at="2025-10-29T21:16:30 IST" duration-ms="11176" status="PASS">
+        <test-method signature="testBrowserBackAfterLogin()[pri:10, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:48:36 IST" name="testBrowserBackAfterLogin" description="Validate browser back button behavior after successful login" finished-at="2025-10-30T21:49:34 IST" duration-ms="58293" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMandatoryFieldIndicators -->
-        <test-method signature="testPageMetadata()[pri:3, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:16:30 IST" name="testPageMetadata" description="Validate page metadata" finished-at="2025-10-29T21:16:41 IST" duration-ms="10890" status="PASS">
+        </test-method> <!-- testBrowserBackAfterLogin -->
+        <test-method signature="testBrowserBackAfterLogout()[pri:11, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:49:34 IST" name="testBrowserBackAfterLogout" description="Validate browser back button behavior after logout" finished-at="2025-10-30T21:50:05 IST" duration-ms="31121" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Failed to navigate to Login page]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Failed to navigate to Login page
+at com.opencart.pages.LoginPage.navigateToLogin(LoginPage.java:70)
+at com.opencart.tests.LoginTests.testBrowserBackAfterLogout(LoginTests.java:395)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(), 'Login')] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\vimal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63541}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63541/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b57aa99404cb743aed19b4cb086b88a2
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.opencart.utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:56)
+at com.opencart.pages.LoginPage.navigateToLogin(LoginPage.java:56)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBrowserBackAfterLogout -->
+        <test-method signature="testMultipleUnsuccessfulLogins()[pri:12, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:50:06 IST" name="testMultipleUnsuccessfulLogins" description="Validate system behavior after multiple unsuccessful login attempts" finished-at="2025-10-30T21:50:39 IST" duration-ms="32995" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Error during login]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Error during login
+at com.opencart.pages.LoginPage.login(LoginPage.java:109)
+at com.opencart.pages.LoginPage.attemptMultipleInvalidLogins(LoginPage.java:140)
+at com.opencart.tests.LoginTests.testMultipleUnsuccessfulLogins(LoginTests.java:425)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: input-email (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\vimal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63541}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63541/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b57aa99404cb743aed19b4cb086b88a2
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.opencart.utilities.WaitUtils.waitForElementToBeVisible(WaitUtils.java:42)
+at com.opencart.base.CommonWrapper.clickAndInputValue(CommonWrapper.java:121)
+at com.opencart.pages.LoginPage.login(LoginPage.java:93)
+... 34 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMultipleUnsuccessfulLogins -->
+        <test-method signature="testPasswordMasking()[pri:13, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:50:39 IST" name="testPasswordMasking" description="Validate that password field content is masked" finished-at="2025-10-30T21:50:44 IST" duration-ms="4751" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPasswordMasking -->
+        <test-method signature="testPasswordCopyRestriction()[pri:14, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:50:44 IST" name="testPasswordCopyRestriction" description="Validate that copying password field content is restricted" finished-at="2025-10-30T21:50:56 IST" duration-ms="12643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPasswordCopyRestriction -->
+        <test-method signature="testPasswordNotInSource()[pri:15, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:50:56 IST" name="testPasswordNotInSource" description="Validate that password is not visible in page source" finished-at="2025-10-30T21:51:07 IST" duration-ms="10858" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPasswordNotInSource -->
+        <test-method signature="testLoginAfterPasswordChange()[pri:16, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:51:07 IST" name="testLoginAfterPasswordChange" description="Validate login functionality after password change" finished-at="2025-10-30T21:51:07 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginAfterPasswordChange -->
+        <test-method signature="testSessionPersistence()[pri:17, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:51:07 IST" name="testSessionPersistence" description="Validate session persistence after browser closure" finished-at="2025-10-30T21:51:25 IST" duration-ms="17301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSessionPersistence -->
+        <test-method signature="testNavigationFromLoginPage()[pri:19, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:51:25 IST" name="testNavigationFromLoginPage" description="Validate navigation to other pages from login page" finished-at="2025-10-30T21:51:30 IST" duration-ms="5615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavigationFromLoginPage -->
+        <test-method signature="testMultipleNavigationWays()[pri:20, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:51:30 IST" name="testMultipleNavigationWays" description="Validate various navigation methods to login page" finished-at="2025-10-30T21:51:41 IST" duration-ms="10895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMultipleNavigationWays -->
+        <test-method signature="testPageMetadata()[pri:21, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:51:41 IST" name="testPageMetadata" description="Validate page metadata" finished-at="2025-10-30T21:51:52 IST" duration-ms="10970" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPageMetadata -->
-        <test-method signature="testUILayout()[pri:4, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:16:41 IST" name="testUILayout" description="Validate UI layout and design" finished-at="2025-10-29T21:16:52 IST" duration-ms="11433" status="PASS">
+        <test-method signature="testUILayout()[pri:22, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:51:52 IST" name="testUILayout" description="Validate UI layout and design" finished-at="2025-10-30T21:52:07 IST" duration-ms="14824" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUILayout -->
-        <test-method signature="testRegistrationWithMandatoryFields()[pri:5, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:16:52 IST" name="testRegistrationWithMandatoryFields" description="Validate registration using only mandatory fields" finished-at="2025-10-29T21:17:06 IST" duration-ms="13260" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRegistrationWithMandatoryFields -->
-        <test-method signature="testRegistrationWithAllFields()[pri:6, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:17:06 IST" name="testRegistrationWithAllFields" description="Validate registration with all available fields" finished-at="2025-10-29T21:17:12 IST" duration-ms="6147" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRegistrationWithAllFields -->
-        <test-method signature="testEmptyMandatoryFields()[pri:7, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:17:12 IST" name="testEmptyMandatoryFields" description="Validate error messages for empty mandatory fields" finished-at="2025-10-29T21:17:39 IST" duration-ms="27512" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testEmptyMandatoryFields -->
-        <test-method signature="testFieldsWithSpacesOnly()[pri:8, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:17:39 IST" name="testFieldsWithSpacesOnly" description="Validate fields don&#039;t accept only spaces" finished-at="2025-10-29T21:19:17 IST" duration-ms="97302" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testFieldsWithSpacesOnly -->
-        <test-method signature="testTrimSpaces()[pri:9, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:19:17 IST" name="testTrimSpaces" description="Validate trimming of leading/trailing spaces" finished-at="2025-10-29T21:19:31 IST" duration-ms="14131" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testTrimSpaces -->
-        <test-method signature="testInvalidEmailFormat(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:19:31 IST" name="testInvalidEmailFormat" description="Validate registration with invalid email format" data-provider="InvalidRegistrationData" finished-at="2025-10-29T21:22:02 IST" duration-ms="151487" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Vimal]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Kumar]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9876543210]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-No email validation detected for value: ''. Expected HTML5 validation, JavaScript validation, or server-side error. expected [true] but found [false],
-Invalid email warning (via CommonWrapper) not shown! expected [true] but found [false],
-Email validation message (via HTML5) not as expected! expected [true] but found [false],
-Email field incorrectly reported as valid! expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-No email validation detected for value: ''. Expected HTML5 validation, JavaScript validation, or server-side error. expected [true] but found [false],
-Invalid email warning (via CommonWrapper) not shown! expected [true] but found [false],
-Email validation message (via HTML5) not as expected! expected [true] but found [false],
-Email field incorrectly reported as valid! expected [false] but found [true]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at com.opencart.pages.RegisterPage.verifyInvalidEmailError(RegisterPage.java:503)
-at com.opencart.tests.RegisterTests.testInvalidEmailFormat(RegisterTests.java:360)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidEmailFormat -->
-        <test-method signature="testInvalidEmailFormat(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:22:03 IST" name="testInvalidEmailFormat" description="Validate registration with invalid email format" data-provider="InvalidRegistrationData" finished-at="2025-10-29T21:22:03 IST" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Shiva]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[B]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[shivab1@test.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9988776655]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@1234]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidEmailFormat -->
-        <test-method signature="testInvalidEmailFormat(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:22:03 IST" name="testInvalidEmailFormat" description="Validate registration with invalid email format" data-provider="InvalidRegistrationData" finished-at="2025-10-29T21:22:03 IST" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Venkat]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Rajendran]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[venkatr1@test.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9988776655]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[FALSE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidEmailFormat -->
-        <test-method signature="testInvalidEmailFormat(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:22:03 IST" name="testInvalidEmailFormat" description="Validate registration with invalid email format" data-provider="InvalidRegistrationData" finished-at="2025-10-29T21:24:41 IST" duration-ms="158159" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[At]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[lee]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[invalidemail]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9988776655]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-No email validation detected for value: ''. Expected HTML5 validation, JavaScript validation, or server-side error. expected [true] but found [false],
-Invalid email warning (via CommonWrapper) not shown! expected [true] but found [false],
-Email validation message (via HTML5) not as expected! expected [true] but found [false],
-Email field incorrectly reported as valid! expected [false] but found [true],
-Invalid email warning (via CommonWrapper) not shown! expected [true] but found [false],
-Email validation message (via HTML5) not as expected! expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-No email validation detected for value: ''. Expected HTML5 validation, JavaScript validation, or server-side error. expected [true] but found [false],
-Invalid email warning (via CommonWrapper) not shown! expected [true] but found [false],
-Email validation message (via HTML5) not as expected! expected [true] but found [false],
-Email field incorrectly reported as valid! expected [false] but found [true],
-Invalid email warning (via CommonWrapper) not shown! expected [true] but found [false],
-Email validation message (via HTML5) not as expected! expected [true] but found [false]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at com.opencart.pages.RegisterPage.verifyInvalidEmailError(RegisterPage.java:503)
-at com.opencart.tests.RegisterTests.testInvalidEmailFormat(RegisterTests.java:360)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidEmailFormat -->
-        <test-method signature="testInvalidEmailFormat(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:24:41 IST" name="testInvalidEmailFormat" description="Validate registration with invalid email format" data-provider="InvalidRegistrationData" finished-at="2025-10-29T21:24:41 IST" duration-ms="8" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Vimal]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Kumar]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[vimal1@test.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[invalid-phone]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidEmailFormat -->
-        <test-method signature="testInvalidPhoneNumber(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:24:41 IST" name="testInvalidPhoneNumber" description="Validate registration with invalid phone number" data-provider="InvalidRegistrationData" finished-at="2025-10-29T21:24:41 IST" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Vimal]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Kumar]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9876543210]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidPhoneNumber -->
-        <test-method signature="testInvalidPhoneNumber(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:24:41 IST" name="testInvalidPhoneNumber" description="Validate registration with invalid phone number" data-provider="InvalidRegistrationData" finished-at="2025-10-29T21:24:41 IST" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Shiva]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[B]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[shivab1@test.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9988776655]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@1234]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidPhoneNumber -->
-        <test-method signature="testInvalidPhoneNumber(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:24:41 IST" name="testInvalidPhoneNumber" description="Validate registration with invalid phone number" data-provider="InvalidRegistrationData" finished-at="2025-10-29T21:24:41 IST" duration-ms="6" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Venkat]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Rajendran]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[venkatr1@test.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9988776655]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[FALSE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidPhoneNumber -->
-        <test-method signature="testInvalidPhoneNumber(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:24:41 IST" name="testInvalidPhoneNumber" description="Validate registration with invalid phone number" data-provider="InvalidRegistrationData" finished-at="2025-10-29T21:24:41 IST" duration-ms="6" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[At]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[lee]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[invalidemail]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9988776655]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidPhoneNumber -->
-        <test-method signature="testInvalidPhoneNumber(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:24:41 IST" name="testInvalidPhoneNumber" description="Validate registration with invalid phone number" data-provider="InvalidRegistrationData" finished-at="2025-10-29T21:27:40 IST" duration-ms="178410" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Vimal]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Kumar]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[vimal1@test.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[invalid-phone]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidPhoneNumber -->
-        <test-method signature="testPasswordComplexity()[pri:12, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:27:40 IST" name="testPasswordComplexity" description="Validate password complexity requirements" finished-at="2025-10-29T21:30:20 IST" duration-ms="160304" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPasswordComplexity -->
-        <test-method signature="testPasswordMismatchWithData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:13, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:30:20 IST" name="testPasswordMismatchWithData" description="Validate password mismatch error" data-provider="PasswordMismatchData" finished-at="2025-10-29T21:30:53 IST" duration-ms="32868" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Shiva]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[B]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[shivab1@test.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9988776655]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@1234]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPasswordMismatchWithData -->
-        <test-method signature="testEmptyPasswordConfirm()[pri:14, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:30:53 IST" name="testEmptyPasswordConfirm" description="Validate empty password confirm field" finished-at="2025-10-29T21:31:05 IST" duration-ms="12560" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testEmptyPasswordConfirm -->
-        <test-method signature="testPasswordVisibilityToggle()[pri:15, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:31:05 IST" name="testPasswordVisibilityToggle" description="Validate password visibility toggle" finished-at="2025-10-29T21:31:16 IST" duration-ms="10972" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPasswordVisibilityToggle -->
-        <test-method signature="testFieldConstraints()[pri:16, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:31:16 IST" name="testFieldConstraints" description="Validate field constraints and character limits" finished-at="2025-10-29T21:31:27 IST" duration-ms="11105" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testFieldConstraints -->
-        <test-method signature="testNavigationToRegister()[pri:17, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:31:27 IST" name="testNavigationToRegister" description="Validate navigation to register page" finished-at="2025-10-29T21:31:38 IST" duration-ms="10732" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNavigationToRegister -->
-        <test-method signature="testKeyboardNavigation()[pri:18, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:31:38 IST" name="testKeyboardNavigation" description="Validate registration using keyboard navigation" finished-at="2025-10-29T21:31:51 IST" duration-ms="13140" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testKeyboardNavigation -->
-        <test-method signature="testNewsletterSubscriptionYes()[pri:19, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:31:51 IST" name="testNewsletterSubscriptionYes" description="Validate registration with Newsletter subscription (Yes)" finished-at="2025-10-29T21:31:57 IST" duration-ms="5931" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNewsletterSubscriptionYes -->
-        <test-method signature="testNewsletterSubscriptionNo()[pri:20, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:31:57 IST" name="testNewsletterSubscriptionNo" description="Validate registration with Newsletter subscription (No)" finished-at="2025-10-29T21:32:03 IST" duration-ms="6043" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNewsletterSubscriptionNo -->
-        <test-method signature="testPrivacyPolicyDefaultState()[pri:21, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:32:03 IST" name="testPrivacyPolicyDefaultState" description="Validate Privacy Policy checkbox default state" finished-at="2025-10-29T21:32:07 IST" duration-ms="3796" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPrivacyPolicyDefaultState -->
-        <test-method signature="testRegistrationWithoutPrivacyPolicy(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:22, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:32:07 IST" name="testRegistrationWithoutPrivacyPolicy" description="Validate registration fails without Privacy Policy agreement" data-provider="PrivacyPolicyData" finished-at="2025-10-29T21:35:08 IST" duration-ms="180508" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Venkat]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Rajendran]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[venkatr1@test.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9988776655]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[FALSE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRegistrationWithoutPrivacyPolicy -->
-        <test-method signature="testDuplicateEmailRegistration()[pri:23, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:35:08 IST" name="testDuplicateEmailRegistration" description="Validate registration with existing email address" finished-at="2025-10-29T21:35:27 IST" duration-ms="19449" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDuplicateEmailRegistration -->
-        <test-method signature="testDataStorageVerification(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:35:27 IST" name="testDataStorageVerification" description="Validate data storage verification" data-provider="ValidRegistrationData" finished-at="2025-10-29T21:35:40 IST" duration-ms="12976" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Yogi]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[B]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[vimal1@test.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9988776655]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDataStorageVerification -->
-        <test-method signature="testNavigationLinks()[pri:25, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:35:40 IST" name="testNavigationLinks" description="Validate all navigation links on register page" finished-at="2025-10-29T21:36:17 IST" duration-ms="36540" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNavigationLinks -->
-        <test-method signature="testConfirmationEmail(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:26, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:36:17 IST" name="testConfirmationEmail" description="Validate confirmation email process" data-provider="ValidRegistrationData" finished-at="2025-10-29T21:36:31 IST" duration-ms="14014" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Yogi]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[B]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[vimal1@test.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9988776655]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConfirmationEmail -->
-        <test-method signature="testCrossBrowserCompatibility(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:27, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:36:31 IST" name="testCrossBrowserCompatibility" description="Validate cross-browser compatibility" data-provider="ValidRegistrationData" finished-at="2025-10-29T21:36:38 IST" duration-ms="6724" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Yogi]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[B]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[vimal1@test.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9988776655]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Password@123]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="testCrossBrowserCompatibility()[pri:23, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:52:07 IST" name="testCrossBrowserCompatibility" description="Validate cross-browser compatibility" finished-at="2025-10-30T21:52:24 IST" duration-ms="17347" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCrossBrowserCompatibility -->
-        <test-method signature="cleanupAfterTests()[pri:99, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:36:38 IST" name="cleanupAfterTests" description="Cleanup and navigation to home" finished-at="2025-10-29T21:36:46 IST" duration-ms="8390" status="PASS">
+        <test-method signature="testDataDrivenLogin(java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:52:24 IST" name="testDataDrivenLogin" description="Data-driven login tests with various credential combinations" data-provider="LoginData" finished-at="2025-10-30T21:53:12 IST" duration-ms="47684" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vimalkumarm523@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Tester123!]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDrivenLogin -->
+        <test-method signature="testDataDrivenLogin(java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:53:12 IST" name="testDataDrivenLogin" description="Data-driven login tests with various credential combinations" data-provider="LoginData" finished-at="2025-10-30T21:53:43 IST" duration-ms="30718" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vk636485@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Vimalutr16@]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Failed to navigate to Login page]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Failed to navigate to Login page
+at com.opencart.pages.LoginPage.navigateToLogin(LoginPage.java:70)
+at com.opencart.tests.LoginTests.testDataDrivenLogin(LoginTests.java:712)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(), 'Login')] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\vimal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63541}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63541/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b57aa99404cb743aed19b4cb086b88a2
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.opencart.utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:56)
+at com.opencart.pages.LoginPage.navigateToLogin(LoginPage.java:56)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDrivenLogin -->
+        <test-method signature="testDataDrivenLogin(java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:53:43 IST" name="testDataDrivenLogin" description="Data-driven login tests with various credential combinations" data-provider="LoginData" finished-at="2025-10-30T21:54:38 IST" duration-ms="55273" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vimal1@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDrivenLogin -->
+        <test-method signature="testDataDrivenLogin(java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:54:38 IST" name="testDataDrivenLogin" description="Data-driven login tests with various credential combinations" data-provider="LoginData" finished-at="2025-10-30T21:55:09 IST" duration-ms="30854" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shivab1@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Failed to navigate to Login page]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Failed to navigate to Login page
+at com.opencart.pages.LoginPage.navigateToLogin(LoginPage.java:70)
+at com.opencart.tests.LoginTests.testDataDrivenLogin(LoginTests.java:712)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(), 'Login')] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\vimal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63541}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63541/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b57aa99404cb743aed19b4cb086b88a2
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.opencart.utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:56)
+at com.opencart.pages.LoginPage.navigateToLogin(LoginPage.java:56)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDrivenLogin -->
+        <test-method signature="testDataDrivenLogin(java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:55:09 IST" name="testDataDrivenLogin" description="Data-driven login tests with various credential combinations" data-provider="LoginData" finished-at="2025-10-30T21:56:05 IST" duration-ms="55482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[venkatr1@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDrivenLogin -->
+        <test-method signature="testDataDrivenLogin(java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:56:05 IST" name="testDataDrivenLogin" description="Data-driven login tests with various credential combinations" data-provider="LoginData" finished-at="2025-10-30T21:56:36 IST" duration-ms="30776" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vimal1@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Failed to navigate to Login page]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Failed to navigate to Login page
+at com.opencart.pages.LoginPage.navigateToLogin(LoginPage.java:70)
+at com.opencart.tests.LoginTests.testDataDrivenLogin(LoginTests.java:712)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(), 'Login')] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\vimal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63541}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63541/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b57aa99404cb743aed19b4cb086b88a2
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.opencart.utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:56)
+at com.opencart.pages.LoginPage.navigateToLogin(LoginPage.java:56)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDrivenLogin -->
+        <test-method signature="testDataDrivenLogin(java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:56:36 IST" name="testDataDrivenLogin" description="Data-driven login tests with various credential combinations" data-provider="LoginData" finished-at="2025-10-30T21:56:54 IST" duration-ms="17890" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vk636485@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Vimalutr16@]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDrivenLogin -->
+        <test-method signature="testDataDrivenLogin(java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:56:54 IST" name="testDataDrivenLogin" description="Data-driven login tests with various credential combinations" data-provider="LoginData" finished-at="2025-10-30T21:57:09 IST" duration-ms="15549" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invalid@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[WrongPassword123!]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FAILURE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDrivenLogin -->
+        <test-method signature="testDataDrivenLogin(java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:57:09 IST" name="testDataDrivenLogin" description="Data-driven login tests with various credential combinations" data-provider="LoginData" finished-at="2025-10-30T21:57:33 IST" duration-ms="23127" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FAILURE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDrivenLogin -->
+        <test-method signature="testDataDrivenLogin(java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:57:33 IST" name="testDataDrivenLogin" description="Data-driven login tests with various credential combinations" data-provider="LoginData" finished-at="2025-10-30T21:57:56 IST" duration-ms="23632" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FAILURE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDrivenLogin -->
+        <test-method signature="testDataDrivenLogin(java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:57:56 IST" name="testDataDrivenLogin" description="Data-driven login tests with various credential combinations" data-provider="LoginData" finished-at="2025-10-30T21:58:20 IST" duration-ms="23674" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FAILURE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDrivenLogin -->
+        <test-method signature="testDataDrivenLogin(java.lang.String,java.lang.String,java.lang.String)[pri:24, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:58:20 IST" name="testDataDrivenLogin" description="Data-driven login tests with various credential combinations" data-provider="LoginData" finished-at="2025-10-30T21:58:44 IST" duration-ms="23683" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invalidemail]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FAILURE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDrivenLogin -->
+        <test-method signature="cleanupAfterTests()[pri:99, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:58:44 IST" name="cleanupAfterTests" description="Cleanup and navigation to home" finished-at="2025-10-30T21:58:44 IST" duration-ms="604" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanupAfterTests -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:36:46 IST" name="tearDownClass" finished-at="2025-10-29T21:36:46 IST" duration-ms="3" status="FAIL">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:58:44 IST" name="tearDown" finished-at="2025-10-30T21:58:44 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:58:44 IST" name="tearDownClass" finished-at="2025-10-30T21:58:44 IST" duration-ms="2" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-Password confirmation error should be displayed expected [true] but found [false],
-Should show error message when privacy policy is not accepted expected [true] but found [false]]]>
+Should be navigated to Forgotten Password page expected [true] but found [false],
+Login should fail with invalid credentials: invalid@test.com expected [false] but found [true],
+Login should fail with invalid credentials:  expected [false] but found [true],
+Login should fail with invalid credentials: test@test.com expected [false] but found [true],
+Login should fail with invalid credentials:  expected [false] but found [true],
+Login should fail with invalid credentials: invalidemail expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-Password confirmation error should be displayed expected [true] but found [false],
-Should show error message when privacy policy is not accepted expected [true] but found [false]
+Should be navigated to Forgotten Password page expected [true] but found [false],
+Login should fail with invalid credentials: invalid@test.com expected [false] but found [true],
+Login should fail with invalid credentials:  expected [false] but found [true],
+Login should fail with invalid credentials: test@test.com expected [false] but found [true],
+Login should fail with invalid credentials:  expected [false] but found [true],
+Login should fail with invalid credentials: invalidemail expected [false] but found [true]
 at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
 at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at com.opencart.base.BaseTest.tearDownClass(BaseTest.java:94)
+at com.opencart.base.BaseTest.tearDownClass(BaseTest.java:146)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -879,11 +764,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.opencart.tests.RegisterTests@35835e65]" started-at="2025-10-29T21:36:47 IST" name="afterSuite" finished-at="2025-10-29T21:36:48 IST" duration-ms="693" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.opencart.tests.LoginTests@57a48985]" started-at="2025-10-30T21:58:46 IST" name="afterSuite" finished-at="2025-10-30T21:58:47 IST" duration-ms="584" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.opencart.tests.RegisterTests -->
-    </test> <!-- Registration Tests -->
+      </class> <!-- com.opencart.tests.LoginTests -->
+    </test> <!-- Login Tests -->
   </suite> <!-- OpenCart Test Suite -->
 </testng-results>

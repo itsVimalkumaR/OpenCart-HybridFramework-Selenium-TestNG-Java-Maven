@@ -1,5 +1,4 @@
 com\opencart\utilities\ExcelUtils.class
-com\opencart\pages\LoginPage.class
 com\opencart\utilities\Log.class
 com\opencart\utilities\WaitUtils.class
 com\opencart\pages\OpenCartConfigPage.class
